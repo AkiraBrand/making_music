@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/instrment'
+require './lib/instrument.rb'
 
 class InstrumentTest < Minitest::Test
   def test_it_exists
@@ -10,10 +10,9 @@ class InstrumentTest < Minitest::Test
   end
 
   def test_it_has_attributes
-    skip
     instrument = Instrument.new("Piano")
-
     assert_equal "Piano", instrument.type
     assert_equal false, instrument.broken?
   end
+
 end
